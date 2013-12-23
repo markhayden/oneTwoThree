@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div id="count">0</div>
+  <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="oneTwoThree.js"></script>
+  <script>
+    var counter = new oneTwoThree({
+      increment_low:1, // low end of the random number for count increment
+      increment_high:100, // high end of the random number for count increment
+      refresh_low:250, // low end of the random number for refresh interval
+      refresh_high:2000, // high end of the random number for refresh interval
+      prefix:"", // append a string to the beginning of the returned value
+      format: ",", // add comma divider for three number places
+      file:"count.txt", // what file holds the counter
+      target:"#count"
+    });
+  </script>
+</body>
+</html>
